@@ -1,0 +1,1547 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1a202c;
+}
+@font-face {
+  font-family: "AxiformaLight";
+  src: local("AxiformaLight"),
+    url("./assets/fonts/Axiforma-Light.woff2") format("truetype");
+}
+@font-face {
+  font-family: "Axiforma-Book";
+  src: local("Axiforma-Book"),
+    url("./assets/fonts/Axiforma-Book.woff") format("truetype");
+}
+@font-face {
+  font-family: "Axiforma-Thin";
+  src: local("Axiforma-Thin"),
+    url("./assets/fonts/Axiforma-Thin.woff") format("truetype");
+}
+.bodySidebarContainer {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  overflow: auto;
+  top: 2vh;
+  position: relative;
+}
+.headerContainer {
+  width: 100vw;
+  height: 12vh;
+  background: #212834;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.headerEachLink {
+  display: flex;
+  width: 143px;
+  height: 47px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+.sidebarContainer {
+  width: 21vw;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.bodyContainer {
+  width: 77vw;
+  margin-left: 0.2vw;
+  position: relative;
+  border-radius: 15px;
+}
+.firstChards {
+  display: flex;
+  height: 40%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.secondChards {
+  display: flex;
+  height: 40%;
+  margin-top: 1vh;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.statistics {
+  display: flex;
+  height: 40%;
+  margin-top: 1vh;
+  background-color: #202734;
+  border-radius: 15px;
+  margin-left: 0.3vw;
+}
+.chard1 {
+  width: 88%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #212734;
+  border-radius: 10px;
+}
+.chard2 {
+  width: 55%;
+  height: 100%;
+  margin: 0 1%;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #212734;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.chard3 {
+  width: 42%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #212734;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chard4 {
+  width: 29%;
+  height: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #212734;
+  border-radius: 8px 8px 8px 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.chard5 {
+  width: 34%;
+  height: 100%;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  background-color: #212734;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+.chard6 {
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #212734;
+  border-radius: 7px;
+}
+.hideBalancesBtn {
+  background-color: #1a202c;
+  border: 1px solid #2b3548;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  width: 63%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hideBalancesText {
+  font-size: 0.7em;
+  color: #fff;
+  font-family: "AxiformaLight";
+}
+.slidebarTopBtn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.slidetTopButttons {
+  width: 96%;
+  justify-content: space-evenly;
+  align-self: center;
+  display: flex;
+  height: 13vh;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.sortBalancesBtn {
+  background-color: #1a202c;
+  border: 1px solid #2b3548;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  width: 35%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.searchExchangeBtn {
+  background: linear-gradient(0deg, #1a202c, #1a202c), #ffffff;
+  border: 1px solid #2b3548;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.metamaskText {
+  font-size: 0.7em;
+  font-family: "AxiformaLight";
+  color: #fff;
+}
+.redStat {
+  color: #ff0000;
+  font-size: 0.7em;
+  font-family: "AxiformaLight";
+}
+.gWrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #a588e7;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.gHeader {
+  font-size: 17px;
+  font-family: "Axiforma-Book";
+  margin-top: 4px;
+  color: #fff;
+}
+.headerLinkText {
+  color: #fff;
+  font-family: "AxiformaLight";
+  font-size: 16px;
+}
+.headerLinkBox {
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-around;
+}
+.headerGbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80px;
+  justify-content: space-evenly;
+}
+.metaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  margin: 2% 0px 2% 0px;
+  width: 100%;
+}
+.metaContainerChild1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 42%;
+  /* height: 6vh; */
+}
+.metaContainerChild2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  /* height: 6vh; */
+}
+.sidebarMidContainer {
+  display: flex;
+  background-color: #1a202c;
+  width: 96%;
+  height: 38%;
+  border-radius: 7px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.sidebarMidChild1 {
+  display: flex;
+  width: 82%;
+  justify-content: space-between;
+}
+.binanceCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 6%;
+}
+.greenStatText {
+  font-size: 15px;
+  color: #61e224;
+
+  font-family: "AxiromaLight";
+}
+.binanceIcText {
+  display: flex;
+  flex-direction: row;
+}
+.greenStat {
+  display: flex;
+  flex-direction: column;
+}
+.line {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #686868;
+}
+.lineChartWrapper {
+  width: 96%;
+  height: 70%;
+  margin: 0 auto;
+  position: relative;
+  left: 2%;
+}
+.binSavesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 7px;
+  padding-left: 5%;
+  width: 92%;
+  height: 6vh;
+  margin: 0 auto;
+}
+.binSavesContainer2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #2b3548;
+  border-radius: 7px;
+  padding-left: 5%;
+  width: 92%;
+  height: 6vh;
+  margin: 0 auto;
+}
+.binanceSaves {
+  font-family: "AxiformaLight";
+  color: #fff;
+  padding-left: 5%;
+  font-size: 19px;
+  cursor: pointer;
+}
+.mapingContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+}
+.iconAndName {
+  display: flex;
+  width: 45%;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+.bottomSidebarWrapper {
+  background-color: #212734;
+  height: 18vh;
+  width: 89%;
+  top: 1vh;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+.mapChild {
+  width: 92%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5.7vh;
+}
+.mapChild2 {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.coinbase {
+  color: #fff;
+  font-family: "Axiforma-Book";
+  font-size: 15px;
+}
+.sideBottomContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.sliderBottom {
+  margin: 0px 0px 0px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 88%;
+  justify-content: space-evenly;
+}
+.freeTrailText {
+  color: #fff;
+  font-family: "AxiformaLight";
+  font-size: 14px;
+  width: 110%;
+}
+.daysLeft {
+  font-size: 14px;
+  color: #e04f44;
+  font-family: "AxiformaLight";
+}
+.subscribeBtn {
+  background-color: #a37df9;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  height: 29%;
+}
+.subscribeText {
+  color: #fff;
+  font-size: 15px;
+  font-family: "AxiformaLight";
+}
+.close {
+  width: 23px;
+  height: 23px;
+  background-color: #1a202c;
+  border-radius: 11.5px;
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+  align-items: center;
+}
+.closeText {
+  font-size: 10px;
+  font-family: "AxiformaLight";
+  color: #fff;
+  top: 6%;
+  position: relative;
+}
+.G {
+  font-size: 28px;
+  font-family: "Axiforma-Book";
+  margin-top: 4px;
+  color: #fff;
+}
+.gBox {
+  width: 20%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #805ad5;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.barWrapper {
+  display: flex;
+  position: relative;
+  height: calc(193px * 1);
+  width: calc(51px * 1);
+  flex-direction: column;
+  justify-content: space-around;
+}
+.barContainer {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/svgImages/rect.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+}
+.top {
+  position: absolute;
+  background-image: url("./assets/svgImages/toprect.svg");
+  width: 100%;
+  height: 0;
+  padding-bottom: calc((16 / 51) * 100%);
+  background-size: cover;
+  top: 0;
+  z-index: 4;
+}
+
+.middle-container {
+  position: absolute;
+  width: 100%;
+  height: calc(100%);
+  padding-top: calc((16 / 51) * 100% / 2);
+  padding-bottom: calc((16 / 51) * 100% / 2);
+  display: flex;
+}
+
+.middle {
+  background-image: url("./assets/svgImages/mid.svg");
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  top: calc((16 / 51) * 100% / 2);
+  z-index: 3;
+}
+
+.bottom {
+  position: absolute;
+  background-image: url("./assets/svgImages/toprect.svg");
+  width: 100%;
+  height: 0;
+  padding-bottom: calc((16 / 51) * 100%);
+  background-size: cover;
+  bottom: 0px;
+  z-index: 2;
+}
+.barsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 87%;
+  margin: 0 auto;
+  align-items: center;
+}
+.progressName {
+  position: relative;
+  top: 12%;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Axiforma-Thin";
+}
+.progressPercent {
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Axiforma-Thin";
+}
+.chardTitleWrapper {
+  margin: 0 auto;
+  width: 95%;
+  height: 12%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  top: 2%;
+}
+.chard2Title {
+  font-size: 20px;
+  color: #fff;
+  font-family: "AxiformaLight";
+}
+.sidebarTopContainer {
+  background-color: #212734;
+  height: 78vh;
+  width: 89%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+.chard2SeeMore {
+  font-size: 16px;
+  color: #805ad5;
+  font-family: "AxiformaLight";
+}
+.chard12wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.circleWrapper {
+  background-image: url("./assets/svgImages/circle.svg");
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.days {
+  font-family: "AxiformaLight";
+  color: #fff;
+  font-size: 12px;
+}
+.daysInFuturesText {
+  font-family: "AxiformaLight";
+  color: #fff;
+  font-size: 12px;
+}
+.daysContainerSpec {
+  bottom: 8%;
+  width: 11%;
+  height: 90%;
+  display: flex;
+  background-color: #1a202c;
+  border: 1px solid #a3a0a0;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.daysContainerSpecFut {
+  bottom: 8%;
+  width: 11%;
+  height: 75%;
+  display: flex;
+  background-color: #1a202c;
+  border: 1px solid #a3a0a0;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.daysWrapper {
+  height: 10%;
+  display: flex;
+  width: 93%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+.circleInnerTopWord {
+  color: #e3d9ff;
+  font-family: "AxiformaLight";
+  font-size: 14px;
+}
+.circleInnerGainer {
+  color: #97c876;
+  font-family: "AxiformaLight";
+  font-size: 12px;
+}
+.circleInnerLooser {
+  color: #d23737;
+  font-family: "AxiformaLight";
+  font-size: 14px;
+}
+.apecoin {
+  color: #fff;
+  font-family: "AxiformaLight";
+  font-size: 13px;
+}
+.cirlcePercent {
+  color: #f2f2f2;
+  font-size: 12px;
+  font-family: "AxiformaLight";
+}
+.circleTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arrow-percent {
+  display: flex;
+}
+.rowChardWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  /* z-index: 2; */
+  position: relative;
+  top: 11%;
+}
+.daysInRows {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  bottom: 5%;
+  align-items: flex-end;
+}
+.chard4TopCont {
+  width: 80%;
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 4%;
+}
+.userName {
+  color: #fff;
+  font-family: "AxiformaLight";
+  font-size: 18px;
+}
+.syncNums {
+  color: #805ad5;
+  font-family: "AxiformaLight";
+  font-size: 24px;
+}
+.change {
+  background-image: url("./assets/svgImages/change.svg");
+  background-size: cover;
+  height: 34px;
+  width: 31px;
+  background-repeat: no-repeat;
+}
+.binancePurple {
+  background-image: url("./assets/svgImages/binanceiconPurple.svg");
+  background-size: cover;
+  height: 32px;
+  width: 31px;
+  background-repeat: no-repeat;
+}
+.cards {
+  background-image: url("./assets/svgImages/cards.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 34px;
+  width: 32px;
+}
+.lineChartChecks {
+  float: right;
+  width: 36%;
+  height: 13%;
+  background: #212834;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  right: 3%;
+  top: 2%;
+}
+
+.checkbox input[type="checkbox"] {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+}
+.checkbox label {
+  position: relative;
+}
+.checkbox label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.28s ease;
+  border-radius: 3px;
+  border: 2px solid #805ad5;
+}
+.checkbox label:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid #61e224;
+  border-left: 2px solid #61e224;
+  -webkit-transform: rotate(-45deg) scale(0);
+  transform: rotate(-45deg) scale(0);
+  transition: transform ease 0.25s;
+  will-change: transform;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+.checkbox input[type="checkbox"]:checked ~ label::before {
+  color: #7bbe72;
+}
+
+.checkbox input[type="checkbox"]:checked ~ label::after {
+  -webkit-transform: rotate(-45deg) scale(1);
+  transform: rotate(-45deg) scale(1);
+}
+
+.checkbox label {
+  display: block;
+  padding-left: 40px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  vertical-align: sub;
+}
+.checkbox label span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: 0;
+}
+.checkbox2 input[type="checkbox"] {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+}
+.checkbox2 label {
+  position: relative;
+}
+.checkbox2 label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.28s ease;
+  border-radius: 3px;
+  border: 2px solid #805ad5;
+}
+.checkbox2 label:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid #61e224;
+  border-left: 2px solid #61e224;
+  -webkit-transform: rotate(-45deg) scale(0);
+  transform: rotate(-45deg) scale(0);
+  transition: transform ease 0.25s;
+  will-change: transform;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+.checkbox2 input[type="checkbox"]:checked ~ label::before {
+  color: #7bbe72;
+}
+
+.checkbox2 input[type="checkbox"]:checked ~ label::after {
+  -webkit-transform: rotate(-45deg) scale(1);
+  transform: rotate(-45deg) scale(1);
+}
+
+.checkbox2 label {
+  display: block;
+  padding-left: 40px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  vertical-align: sub;
+}
+.checkbox2 label span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.checkbox2 input[type="checkbox"]:focus + label::before {
+  outline: 0;
+}
+.checkbox3 input[type="checkbox"] {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+}
+.checkbox3 label {
+  position: relative;
+}
+.checkbox3 label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.28s ease;
+  border-radius: 3px;
+  border: 2px solid #805ad5;
+}
+.checkbox3 label:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 5px;
+  border-bottom: 2px solid #61e224;
+  border-left: 2px solid #61e224;
+  -webkit-transform: rotate(-45deg) scale(0);
+  transform: rotate(-45deg) scale(0);
+  transition: transform ease 0.25s;
+  will-change: transform;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+.checkbox3 input[type="checkbox"]:checked ~ label::before {
+  color: #7bbe72;
+}
+
+.checkbox3 input[type="checkbox"]:checked ~ label::after {
+  -webkit-transform: rotate(-45deg) scale(1);
+  transform: rotate(-45deg) scale(1);
+}
+
+.checkbox3 label {
+  display: block;
+  padding-left: 40px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  vertical-align: sub;
+}
+.checkbox3 label span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.checkbox3 input[type="checkbox"]:focus + label::before {
+  outline: 0;
+}
+.fees {
+  background-image: url("./assets/svgImages/fees.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 34px;
+  width: 26px;
+  left: 2%;
+  position: relative;
+}
+.allOneYear {
+  left: -16%;
+  position: relative;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.allText {
+  font-size: 13px;
+  font-family: "AxiformaLight";
+  color: #fff;
+  position: relative;
+  left: 5%;
+}
+.all {
+  background: linear-gradient(180deg, #212834 0%, #262f3d 0.01%, #212734 100%);
+  border: 0.8px solid #a3a0a0;
+  border-radius: 4px;
+  width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.oneYearText {
+  font-size: 13px;
+  font-family: "AxiformaLight";
+  color: #fff;
+  position: relative;
+  left: 5%;
+}
+.oneYear {
+  background: linear-gradient(180deg, #212834 0%, #262f3d 0.01%, #212734 100%);
+  border: 0.9px solid #a3a0a0;
+  border-radius: 3px;
+  width: 38%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.usd {
+  font-size: 14px;
+  position: relative;
+  top: 22%;
+  font-family: "Axiforma-Book";
+  color: #128994;
+}
+.btc {
+  font-size: 13px;
+  position: relative;
+  top: 22%;
+  font-family: "Axiforma-Book";
+  color: #58c925;
+}
+.eth {
+  font-size: 13px;
+  position: relative;
+  top: 22%;
+  font-family: "Axiforma-Book";
+  color: #cad9ff;
+}
+.binance {
+  display: flex;
+  width: 114%;
+  justify-content: space-around;
+}
+.priceInChard5 {
+  display: flex;
+  align-items: center;
+}
+.colWrapper {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+.colBox {
+  background: linear-gradient(
+    180deg,
+    #2b3341 0%,
+    rgba(61, 73, 95, 0.00693628) 99.99%,
+    rgba(33, 39, 51, 0) 100%
+  );
+  border: 0.7px solid #805ad5;
+  filter: drop-shadow(0px 2.72575px 2.72575px rgba(0, 0, 0, 0));
+  border-radius: 9.5px;
+  width: 95%;
+  margin: 0 auto;
+  height: 21%;
+}
+.colContainer {
+  height: 85%;
+  width: 91%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 2%;
+  justify-content: space-around;
+}
+.colTitles {
+  color: #996ff8;
+  font-family: "AxiformaLight";
+  font-size: 14px;
+}
+.colTitles2 {
+  color: #fff;
+  font-family: "AxiformaLight";
+  font-size: 14px;
+}
+.futuresContainer {
+  width: 87%;
+  margin: 0 auto;
+  height: 84%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  top: 4%;
+}
+.futuresBox {
+  width: 100%;
+  display: flex;
+  height: 27%;
+  background: linear-gradient(
+    180deg,
+    #2b3341 0%,
+    rgba(61, 73, 95, 0.00693628) 99.99%,
+    rgba(33, 39, 51, 0) 100%
+  );
+  border: 0.482541px solid #686868;
+  border-radius: 5px;
+  justify-content: space-around;
+}
+.futuresChart {
+  width: 100%;
+  height: 48%;
+  background: #1f2633;
+  border: 0.5px solid #686868;
+  border-radius: 2.5px;
+  background-image: url("./assets/svgImages/linearChart.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.futuresBottom {
+  display: flex;
+  width: 91%;
+  height: 22%;
+  justify-content: space-between;
+  align-items: center;
+}
+.daysInFutures {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+  height: 24%;
+  position: relative;
+  top: 73%;
+  align-items: flex-end;
+}
+.date {
+  color: #fff;
+  font-family: "AxiformaLight";
+  font-size: 11px;
+}
+.percentGreen {
+  color: #61e224;
+  font-size: 18px;
+}
+.percentRed {
+  color: #ff0000;
+  font-size: 21px;
+}
+.percentBox {
+  display: flex;
+  align-items: flex-start;
+}
+.percents {
+  display: flex;
+  height: 50%;
+  width: 83%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.percentsContainer {
+  width: 130%;
+  height: 100%;
+  position: relative;
+  left: -8%;
+}
+.futuresBottomText {
+  color: #fff;
+  font-family: "Axiforma-Book";
+  font-size: 13px;
+}
+.futuresLine {
+  border-radius: 4.4px;
+  width: 100%;
+  height: 0.5px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.futuresBottomBox {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.futureBottomPrices {
+  color: #805ad5;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  font-family: "Axiforma-Book";
+}
+.es {
+  color: #fff;
+  font-family: "Axiforma-Book";
+  font-size: 14px;
+}
+.priceBox {
+  background: linear-gradient(
+    180deg,
+    #2b3341 0%,
+    rgba(61, 73, 95, 0.00693628) 99.99%,
+    rgba(33, 39, 51, 0) 100%
+  );
+  border: 0.2px solid #686868;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 2.5px;
+  width: 80%;
+  height: 72%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price {
+  color: #fff;
+  font-family: "Axiforma-Book";
+  display: flex;
+  align-items: center;
+}
+.priceMainContainer {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.statContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tableContainer {
+  width: 100%;
+  position: relative;
+  height: 91%;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.tableHead {
+  width: 95%;
+  height: 14%;
+  background-color: #272e3c;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+thead tr th {
+  font-family: "Axiforma-Thin";
+}
+tbody {
+  width: 100%;
+  height: 100%;
+}
+table {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+}
+.tbl-header {
+  background-color: #272e3c;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+}
+.tbl-content {
+  overflow-x: auto;
+  height: 73%;
+}
+th {
+  font-size: 14px;
+  width: 7%;
+  color: #fff;
+  text-align: center;
+}
+td {
+  /* padding: 2% 3%; */
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(106, 96, 96, 0.1);
+}
+
+/* demo styles */
+
+section {
+  margin: 50px;
+}
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #f50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+.aave {
+  background-image: url("./assets/svgImages/aave.svg");
+  width: 21%;
+  height: 82%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.aaveWrapper {
+  width: 83%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  margin: 0 24%;
+  justify-content: flex-end;
+}
+.aaveText {
+  font-family: "AxiformaLight";
+  font-size: 15px;
+}
+tbody:nth-child(1) td {
+  font-size: 16px;
+  font-family: "Axiforma-Thin";
+}
+.greenPercent {
+  color: #34d35c;
+}
+.IoMdArrowDropup {
+  position: relative;
+  margin-right: 5%;
+}
+.greenProgress {
+  background-image: url("./assets/svgImages/greenProgress.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 83%;
+  height: 83%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1576px) {
+  .futuresBottomText {
+    font-size: 11px;
+  }
+  .gBox {
+    width: 21%;
+    height: 81%;
+  }
+  .binanceSaves {
+    font-size: 17px;
+  }
+  .binIcon {
+    height: 18px;
+    width: 18px;
+  }
+  .eth {
+    font-size: 10px;
+  }
+  .btc {
+    font-size: 10px;
+  }
+  .usd {
+    font-size: 10px;
+  }
+  .checkbox3 {
+    width: 15%;
+  }
+  .checkbox3 label:before {
+    width: 17px;
+    height: 17px;
+  }
+  .checkbox2 {
+    width: 15%;
+  }
+  .checkbox2 label:before {
+    width: 17px;
+    height: 17px;
+  }
+  .checkbox {
+    width: 15%;
+  }
+  .checkbox label:before {
+    width: 17px;
+    height: 17px;
+  }
+  .chard2Title {
+    font-size: 18px;
+  }
+  .allOneYear {
+    left: -10%;
+    height: 80%;
+  }
+  .colBox {
+    height: 18%;
+  }
+  .colTitles {
+    font-size: 13px;
+  }
+  .colTitles2 {
+    font-size: 11px;
+  }
+  .colContainer {
+    justify-content: space-evenly;
+  }
+  .circleWrapper {
+    height: 52%;
+  }
+  .apecoin {
+    font-size: 10px;
+  }
+  .circleInnerTopWord {
+    font-size: 11px;
+  }
+  .circleInnerLooser {
+    font-size: 12px;
+  }
+  .circleInnerGainer {
+    font-size: 12px;
+  }
+  .cirlcePercent {
+    font-size: 10px;
+  }
+  .syncNums {
+    font-size: 20px;
+  }
+  .syncIcon {
+    width: 16px;
+    height: 16px;
+  }
+  .dollarIcon {
+    width: 16px;
+    height: 16px;
+  }
+  .price {
+    font-size: 15px;
+  }
+  .priceBox {
+    height: 64%;
+  }
+  .percentGreen {
+    font-size: 16px;
+  }
+  .percentRed {
+    font-size: 16px;
+  }
+  .futuresBottomBox {
+    justify-content: space-evenly;
+  }
+  .futureBottomPrices {
+    font-size: 12px;
+  }
+  .es {
+    font-size: 12px;
+  }
+  .hideBalancesText {
+    font-size: 11px;
+  }
+  tbody:nth-child(1) td {
+    font-size: 13px;
+  }
+  .aaveText {
+    font-size: 13px;
+  }
+  th {
+    font-size: 12px;
+  }
+  .barWrapper {
+    height: calc(174px * 1);
+    width: calc(44px * 1);
+  }
+  .progressName {
+    font-size: 11px;
+  }
+  .headerLinkText {
+    font-size: 14px;
+  }
+  .headerEachLink {
+    width: 111px;
+    height: 42px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .firstChards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chard1 {
+    width: 98%;
+    height: 76vh;
+  }
+  .chard12wrapper {
+    display: flex;
+    width: 99%;
+    flex-direction: row;
+    padding-top: 1vh;
+  }
+  .chard2 {
+    width: 50%;
+    height: 46vh;
+  }
+  .chard3 {
+    width: 50%;
+    height: 46vh;
+  }
+  .secondChards {
+    padding: 2vh 0;
+    margin: 0 auto;
+    display: flex;
+    width: 125%;
+    height: 45vh;
+    left: -26%;
+    flex-direction: row;
+    position: relative;
+  }
+  .statistics {
+    width: 125%;
+    height: 45vh;
+    left: -26%;
+    position: relative;
+  }
+  .sidebarTopContainer {
+    width: 94%;
+  }
+  .daysInFutures {
+    width: 63%;
+  }
+  .futureBottomPrices {
+    font-size: 14px;
+  }
+  .colTitles {
+    font-size: 14px;
+    font-family: "Axiforma-Book";
+  }
+  .days {
+    font-size: 16px;
+  }
+  .gBox {
+    height: 60%;
+  }
+  th {
+    font-size: 14px;
+  }
+  tbody:nth-child(1) td {
+    font-size: 18px;
+  }
+  .aaveWrapper {
+    width: 92%;
+    justify-content: space-between;
+  }
+  .aaveText {
+    font-size: 15px;
+  }
+  .dots {
+    height: 32px;
+    width: 32px;
+  }
+  .circleWrapper {
+    display: flex;
+    width: 46%;
+    align-items: center;
+  }
+  .circleInnerTopWord {
+    font-size: 15px;
+  }
+  .circleInnerGainer {
+    font-size: 20px;
+  }
+  .circleInnerLooser {
+    font-size: 20px;
+  }
+  .apecoin {
+    font-size: 14px;
+  }
+  .cirlcePercent {
+    font-size: 13px;
+  }
+}
